@@ -10,10 +10,11 @@ try:
     DOB = datetime(int(year), int(month), int(day))
 except ValueError:
     print("Invalid date")
+
 now = datetime.now()
 
 delta = now - DOB
 
 print("You have been alive for {} days and {} seconds!".format(
     delta.days,
-    delta.seconds))
+    delta.days * delta.seconds))
